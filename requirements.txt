@@ -1,0 +1,16 @@
+langchain
+langchain-google-genai
+langchain-anthropic
+langgraph
+pydantic>=2.0
+faiss-cpu
+streamlit
+loguru
+tenacity
+diskcache
+tavily-python
+arxiv
+python-dotenv
+duckduckgo-search
+pyyaml
+langchain-community

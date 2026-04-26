@@ -1,0 +1,510 @@
+2026-04-26 21:52:33 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 21:52:33 | INFO | Orchestrator | Query: 'stuff about AI'
+2026-04-26 21:52:33 | INFO | PlannerAgent | Planning sub-queries for: 'stuff about AI' (refinement loop 0)
+2026-04-26 21:53:07 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 21:53:07 | INFO | Orchestrator | Query: 'stuff about AI'
+2026-04-26 21:53:07 | INFO | PlannerAgent | Planning sub-queries for: 'stuff about AI' (refinement loop 0)
+2026-04-26 21:53:40 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 21:53:40 | INFO | Orchestrator | Query: 'stuff about AI'
+2026-04-26 21:53:40 | INFO | PlannerAgent | Planning sub-queries for: 'stuff about AI' (refinement loop 0)
+2026-04-26 21:54:05 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 21:54:05 | INFO | Orchestrator | Query: 'stuff about AI'
+2026-04-26 21:54:05 | INFO | PlannerAgent | Planning sub-queries for: 'stuff about AI' (refinement loop 0)
+2026-04-26 21:54:35 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 21:54:35 | INFO | Orchestrator | Query: 'stuff about AI'
+2026-04-26 21:54:35 | INFO | PlannerAgent | Planning sub-queries for: 'stuff about AI' (refinement loop 0)
+2026-04-26 22:13:00 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 22:13:00 | INFO | Orchestrator | Query: 'stuff about AI'
+2026-04-26 22:13:00 | INFO | PlannerAgent | Planning sub-queries for: 'stuff about AI' (refinement loop 0)
+2026-04-26 22:13:53 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 22:13:53 | INFO | Orchestrator | Query: 'stuff about AI'
+2026-04-26 22:13:53 | INFO | PlannerAgent | Planning sub-queries for: 'stuff about AI' (refinement loop 0)
+2026-04-26 22:14:02 | INFO | PlannerAgent | Generated 6 sub-queries
+2026-04-26 22:14:02 | DEBUG | PlannerAgent |   Sub-query 1: Architectural innovations in large language models 2022-2025
+2026-04-26 22:14:02 | DEBUG | PlannerAgent |   Sub-query 2: Applications of deep learning in medical image analysis 2020-2025
+2026-04-26 22:14:02 | DEBUG | PlannerAgent |   Sub-query 3: Methods for detecting and mitigating algorithmic bias in machine learning systems
+2026-04-26 22:14:02 | DEBUG | PlannerAgent |   Sub-query 4: Advances in multi-agent reinforcement learning for complex system control 2021-2025
+2026-04-26 22:14:02 | DEBUG | PlannerAgent |   Sub-query 5: Energy-efficient AI model deployment on edge devices
+2026-04-26 22:14:02 | DEBUG | PlannerAgent |   Sub-query 6: Techniques for post-hoc interpretability of black-box deep learning models
+2026-04-26 22:14:02 | INFO | SearchAgent | Searching across 6 sub-queries (parallel, 3 adapters)
+2026-04-26 22:14:03 | INFO | DDGTool | DDG returned 0 results for: 'Architectural innovations in large language models...'
+2026-04-26 22:14:03 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:14:06 | INFO | ArxivTool | arXiv returned 5 results for: 'Architectural innovations in large language models...'
+2026-04-26 22:14:06 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:14:08 | INFO | TavilyTool | Tavily returned 5 results for: 'Architectural innovations in large language models...'
+2026-04-26 22:15:52 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 22:15:52 | INFO | Orchestrator | Query: 'stuff about AI'
+2026-04-26 22:15:52 | INFO | PlannerAgent | Planning sub-queries for: 'stuff about AI' (refinement loop 0)
+2026-04-26 22:16:01 | INFO | PlannerAgent | Generated 6 sub-queries
+2026-04-26 22:16:01 | DEBUG | PlannerAgent |   Sub-query 1: Recent advancements in large language models for text generation 2023-2025
+2026-04-26 22:16:01 | DEBUG | PlannerAgent |   Sub-query 2: Regulatory frameworks and governance models for artificial intelligence 2022-2025
+2026-04-26 22:16:01 | DEBUG | PlannerAgent |   Sub-query 3: Application of deep learning for medical image analysis and diagnosis 2020-2025
+2026-04-26 22:16:01 | DEBUG | PlannerAgent |   Sub-query 4: Energy-efficient AI accelerators for edge computing 2022-2025
+2026-04-26 22:16:01 | DEBUG | PlannerAgent |   Sub-query 5: Advances in multi-agent reinforcement learning for complex system control 2021-2025
+2026-04-26 22:16:01 | DEBUG | PlannerAgent |   Sub-query 6: Methods for interpretability and explainability in black-box deep learning models 2022-2025
+2026-04-26 22:16:01 | INFO | SearchAgent | Searching across 6 sub-queries (parallel, 3 adapters)
+2026-04-26 22:16:02 | INFO | DDGTool | DDG returned 0 results for: 'Recent advancements in large language models for t...'
+2026-04-26 22:16:02 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:16:05 | INFO | ArxivTool | arXiv returned 5 results for: 'Recent advancements in large language models for t...'
+2026-04-26 22:16:05 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:16:05 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:16:06 | INFO | TavilyTool | Tavily returned 5 results for: 'Recent advancements in large language models for t...'
+2026-04-26 22:16:06 | INFO | DDGTool | DDG returned 5 results for: 'Regulatory frameworks and governance models for ar...'
+2026-04-26 22:16:06 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:16:10 | INFO | ArxivTool | arXiv returned 5 results for: 'Regulatory frameworks and governance models for ar...'
+2026-04-26 22:16:10 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:16:10 | INFO | TavilyTool | Tavily returned 5 results for: 'Regulatory frameworks and governance models for ar...'
+2026-04-26 22:16:10 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:16:10 | INFO | DDGTool | DDG returned 5 results for: 'Application of deep learning for medical image ana...'
+2026-04-26 22:16:10 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:16:13 | INFO | ArxivTool | arXiv returned 5 results for: 'Application of deep learning for medical image ana...'
+2026-04-26 22:16:13 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:16:14 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:16:18 | INFO | TavilyTool | Tavily returned 5 results for: 'Application of deep learning for medical image ana...'
+2026-04-26 22:16:19 | INFO | DDGTool | DDG returned 0 results for: 'Energy-efficient AI accelerators for edge computin...'
+2026-04-26 22:16:19 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:16:21 | INFO | TavilyTool | Tavily returned 5 results for: 'Energy-efficient AI accelerators for edge computin...'
+2026-04-26 22:16:21 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:16:22 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:16:23 | INFO | ArxivTool | arXiv returned 5 results for: 'Energy-efficient AI accelerators for edge computin...'
+2026-04-26 22:16:23 | INFO | DDGTool | DDG returned 5 results for: 'Advances in multi-agent reinforcement learning for...'
+2026-04-26 22:16:23 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:16:27 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:16:30 | INFO | TavilyTool | Tavily returned 5 results for: 'Advances in multi-agent reinforcement learning for...'
+2026-04-26 22:16:30 | INFO | ArxivTool | arXiv returned 5 results for: 'Advances in multi-agent reinforcement learning for...'
+2026-04-26 22:16:30 | INFO | DDGTool | DDG returned 0 results for: 'Methods for interpretability and explainability in...'
+2026-04-26 22:16:30 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:16:34 | INFO | ArxivTool | arXiv returned 5 results for: 'Methods for interpretability and explainability in...'
+2026-04-26 22:16:34 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:16:34 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:16:34 | INFO | TavilyTool | Tavily returned 5 results for: 'Methods for interpretability and explainability in...'
+2026-04-26 22:16:34 | INFO | SearchAgent | Total unique sources after URL dedup: 45
+2026-04-26 22:16:34 | INFO | ValidatorAgent | Validating 45 sources
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: https://zhidao.baidu.com/question/821544757420491252.html — reason: Low-credibility user-generated content (Q&A platform) and not a research source.
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: https://zhidao.baidu.com/question/436958453654434412.html — reason: Low-credibility user-generated content (Q&A platform) and not a research source.
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: https://zhidao.baidu.com/question/501046175.html — reason: Outdated (>5 years) and not a foundational work; low-credibility user-generated content (Q&A platform).
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: https://brainly.ph/question/2303191 — reason: Outdated (>5 years) and not a foundational work; low-credibility user-generated content (Q&A platform).
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: https://brainly.ph/question/11512966 — reason: Low-credibility user-generated content (Q&A platform) and not a research source.
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: http://arxiv.org/abs/1301.2158v1 — reason: Outdated (>5 years) and not a foundational/seminal work in a rapidly evolving field.
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.truefoundry.com/blog/ai-governance-framework
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.ai21.com/knowledge/ai-governance-frameworks/
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.mindfoundry.ai/blog/ai-regulations-around-the-wo
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.98 < 7.0): https://www.ethics.harvard.edu/news/2025/11/ai-governance-cr
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.98 < 7.0): https://www.credo.ai/gartner-market-guide-for-ai-governance-
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://www.sciencedirect.com/org/science/article/pii/S15261
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://link.springer.com/article/10.1007/s42519-024-00422-2
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://www.wsp-publishing.com/en/article/doi/10.47297/wspbd
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 5.82 < 7.0): https://www.nature.com/articles/s41598-025-07883-w
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://digital-library.theiet.org/doi/full/10.1049/cit2.123
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: http://arxiv.org/abs/1910.02923v2 — reason: Outdated (>5 years) for a survey in a rapidly evolving field like deep learning for medical image analysis.
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.14 < 7.0): https://www.edgecortix.com/en/
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.geniatech.com/ai-hardware-2025/
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.74 < 7.0): https://www.ceva-ip.com/wp-content/uploads/2025-Edge-AI-Tech
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 5.16 < 7.0): https://www.idtechex.com/en/research-report/ai-chips-for-edg
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.patsnap.com/resources/blog/articles/edge-ai-infe
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/2005994405727842377 — reason: Low-credibility user-generated content (Q&A platform) and content is off-topic (discussing academic publishing policy, not research).
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/65348886?sort=created — reason: Low-credibility user-generated content (Q&A platform) and content is off-topic (discussing journal quality, not research).
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: https://muchong.com/html/202010/14468191.html — reason: Low-credibility user-generated content (forum) and content is off-topic (discussing journal submission process, not research).
+2026-04-26 22:17:44 | INFO | ValidatorAgent | FILTERED source (score 4.98 < 7.0): https://www.weforum.org/stories/2026/03/advances-in-autonomo
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: https://muchong.com/t-14468191-1-authorid-543098 — reason: Low-credibility user-generated content (forum) and content is off-topic (discussing journal submission process, not research). Duplicate of another rejected source.
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: http://arxiv.org/abs/1808.05054v1 — reason: Outdated (>5 years) for a research paper in a rapidly evolving field like explainable AI.
+2026-04-26 22:17:44 | INFO | ValidatorAgent | REJECTED source: http://arxiv.org/abs/1910.04301v3 — reason: Outdated (>5 years) for a research paper in a rapidly evolving field like black-box optimization.
+2026-04-26 22:17:44 | INFO | ValidatorAgent | Validation complete: 5 kept, 29 rejected/filtered
+2026-04-26 22:17:44 | INFO | ExtractorAgent | Extracting from 5 validated sources
+2026-04-26 22:17:56 | INFO | ExtractorAgent | All chunks discarded for http://arxiv.org/abs/2501.05032v2 — low information density
+2026-04-26 22:17:56 | INFO | ExtractorAgent | All chunks discarded for http://arxiv.org/abs/2509.16679v1 — low information density
+2026-04-26 22:17:56 | INFO | ExtractorAgent | Extraction complete: 3 sources, 0 low-density chunks discarded
+2026-04-26 22:17:56 | INFO | SynthesizerAgent | Synthesizing report from 3 sources
+2026-04-26 22:18:08 | INFO | SynthesizerAgent | Synthesis complete: 6 claims extracted
+2026-04-26 22:18:08 | INFO | VerifierAgent | Verifying 6 claims against 5 validated URLs
+2026-04-26 22:18:08 | INFO | VerifierAgent | Verification: 6 verified, 0 rejected
+2026-04-26 22:18:08 | DEBUG | VerifierAgent | Applied confidence floor boost — strong evidence but low multiplier product
+2026-04-26 22:18:08 | INFO | VerifierAgent | Confidence: 0.414 | score=1.07 coverage=1.00 agreement=1.00 diversity=0.20 extraction_coverage=1.00
+2026-04-26 22:18:08 | INFO | Orchestrator | === KEEP v2 Pipeline END — Confidence: 0.414 ===
+2026-04-26 22:18:08 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 22:18:08 | INFO | Orchestrator | Query: 'evidence that the earth is completely flat and made of blue cheese 2024 studies'
+2026-04-26 22:18:08 | INFO | PlannerAgent | Planning sub-queries for: 'evidence that the earth is completely flat and made of blue cheese 2024 studies' (refinement loop 0)
+2026-04-26 22:18:26 | INFO | PlannerAgent | Generated 6 sub-queries
+2026-04-26 22:18:26 | DEBUG | PlannerAgent |   Sub-query 1: Rhetorical analysis of flat Earth advocacy literature concerning Earth's geometry 2024
+2026-04-26 22:18:26 | DEBUG | PlannerAgent |   Sub-query 2: Examination of claims regarding Earth's internal composition as blue cheese in pseudoscientific publications 2024
+2026-04-26 22:18:26 | DEBUG | PlannerAgent |   Sub-query 3: Empirical challenges to the spherical Earth model proposed by contemporary flat Earth movements 2024
+2026-04-26 22:18:26 | DEBUG | PlannerAgent |   Sub-query 4: Theoretical justifications for a blue cheese Earth composition within fringe cosmological models 2024
+2026-04-26 22:18:26 | DEBUG | PlannerAgent |   Sub-query 5: Sociological factors influencing belief in flat Earth and blue cheese Earth theories 2024
+2026-04-26 22:18:26 | DEBUG | PlannerAgent |   Sub-query 6: Historical precedents and modern resurgence of non-spherical or non-geological Earth models 2024
+2026-04-26 22:18:26 | INFO | SearchAgent | Searching across 6 sub-queries (parallel, 3 adapters)
+2026-04-26 22:18:26 | INFO | DDGTool | DDG returned 5 results for: 'Rhetorical analysis of flat Earth advocacy literat...'
+2026-04-26 22:18:26 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:18:29 | INFO | ArxivTool | arXiv returned 5 results for: 'Rhetorical analysis of flat Earth advocacy literat...'
+2026-04-26 22:18:29 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:18:30 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:18:32 | INFO | TavilyTool | Tavily returned 5 results for: 'Rhetorical analysis of flat Earth advocacy literat...'
+2026-04-26 22:18:32 | INFO | DDGTool | DDG returned 5 results for: 'Examination of claims regarding Earth's internal c...'
+2026-04-26 22:18:32 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:18:36 | INFO | TavilyTool | Tavily returned 5 results for: 'Examination of claims regarding Earth's internal c...'
+2026-04-26 22:18:36 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:18:36 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:18:37 | INFO | ArxivTool | arXiv returned 5 results for: 'Examination of claims regarding Earth's internal c...'
+2026-04-26 22:18:37 | INFO | DDGTool | DDG returned 0 results for: 'Empirical challenges to the spherical Earth model ...'
+2026-04-26 22:18:37 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:18:41 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:18:41 | INFO | ArxivTool | arXiv returned 5 results for: 'Empirical challenges to the spherical Earth model ...'
+2026-04-26 22:18:42 | INFO | TavilyTool | Tavily returned 5 results for: 'Empirical challenges to the spherical Earth model ...'
+2026-04-26 22:18:43 | INFO | DDGTool | DDG returned 0 results for: 'Theoretical justifications for a blue cheese Earth...'
+2026-04-26 22:18:43 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:18:46 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:18:48 | INFO | TavilyTool | Tavily returned 5 results for: 'Theoretical justifications for a blue cheese Earth...'
+2026-04-26 22:19:27 | INFO | ArxivTool | arXiv returned 5 results for: 'Theoretical justifications for a blue cheese Earth...'
+2026-04-26 22:19:28 | INFO | DDGTool | DDG returned 0 results for: 'Sociological factors influencing belief in flat Ea...'
+2026-04-26 22:19:28 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:19:31 | INFO | TavilyTool | Tavily returned 5 results for: 'Sociological factors influencing belief in flat Ea...'
+2026-04-26 22:19:31 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:19:31 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:19:32 | INFO | ArxivTool | arXiv returned 5 results for: 'Sociological factors influencing belief in flat Ea...'
+2026-04-26 22:19:32 | INFO | DDGTool | DDG returned 0 results for: 'Historical precedents and modern resurgence of non...'
+2026-04-26 22:19:32 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:19:35 | INFO | TavilyTool | Tavily returned 5 results for: 'Historical precedents and modern resurgence of non...'
+2026-04-26 22:19:35 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:19:36 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:19:36 | INFO | ArxivTool | arXiv returned 5 results for: 'Historical precedents and modern resurgence of non...'
+2026-04-26 22:19:36 | INFO | SearchAgent | Total unique sources after URL dedup: 30
+2026-04-26 22:19:36 | INFO | ValidatorAgent | Validating 30 sources
+2026-04-26 22:20:26 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/40144096 — reason: Outdated user-generated content on a Q&A platform (>5 years old).
+2026-04-26 22:20:26 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/25539909 — reason: Outdated user-generated content on a Q&A platform (>5 years old).
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 2.52 < 7.0): https://www.zhihu.com/question/555601849
+2026-04-26 22:20:26 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/47471341 — reason: Outdated user-generated content on a Q&A platform (>5 years old).
+2026-04-26 22:20:26 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/362195124 — reason: Outdated user-generated content on a Q&A platform (>5 years old).
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 2.46 < 7.0): https://zhidao.baidu.com/question/467525593516591165.html
+2026-04-26 22:20:26 | INFO | ValidatorAgent | REJECTED source: https://zhidao.baidu.com/question/21130008.html — reason: Outdated user-generated content on a Q&A platform (>5 years old).
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 2.28 < 7.0): https://zhidao.baidu.com/question/1969902136314255300.html
+2026-04-26 22:20:26 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/en/answer/172537501 — reason: Outdated user-generated content on a Q&A platform (>5 years old).
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 2.82 < 7.0): https://zhidao.baidu.com/question/694980342564586052.html
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 2.94 < 7.0): https://courses.ems.psu.edu/geosc10/print/root1727.html
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.38 < 7.0): https://www.sciencedaily.com/releases/2024/02/240205165855.h
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.44 < 7.0): https://www.smithsonianmag.com/smart-news/scientists-watch-f
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.62 < 7.0): https://news.vt.edu/articles/2024/06/cals-research-bleu-chee
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.74 < 7.0): https://www.mdpi.com/2076-3417/14/24
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.44 < 7.0): https://theconversation.com/flat-earth-spirits-and-conspirac
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.2 < 7.0): https://www.space.com/astronomy/earth/flat-earth-spirits-and
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.68 < 7.0): https://www.britannica.com/topic/flat-Earth
+2026-04-26 22:20:26 | INFO | ValidatorAgent | REJECTED source: https://www.reddit.com/r/TrueAskReddit/comments/1pc6d89/why_ — reason: Low-credibility user-generated forum content.
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.8 < 7.0): https://carsey.unh.edu/publication/conspiracy-vs-science-sur
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.68 < 7.0): https://blogs.loc.gov/maps/2025/03/unconventional-theories-a
+2026-04-26 22:20:26 | INFO | ValidatorAgent | REJECTED source: https://journalofgeocentriccosmology.org/2023/09/06/doi-10-1 — reason: Pseudoscientific journal with fake DOI.
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 4.74 < 7.0): https://www.mdpi.com/2227-7102/14/7/761
+2026-04-26 22:20:26 | INFO | ValidatorAgent | FILTERED source (score 5.1 < 7.0): https://www.nasa.gov/history/90-years-of-our-changing-views-
+2026-04-26 22:20:26 | INFO | ValidatorAgent | REJECTED source: https://medium.com/predict/the-flat-earth-resurgence-explori — reason: Low-credibility personal blog platform.
+2026-04-26 22:20:26 | INFO | ValidatorAgent | Validation complete: 5 kept, 25 rejected/filtered
+2026-04-26 22:20:26 | INFO | ExtractorAgent | Extracting from 5 validated sources
+2026-04-26 22:20:40 | INFO | ExtractorAgent | All chunks discarded for http://arxiv.org/abs/1502.03852v1 — low information density
+2026-04-26 22:20:40 | INFO | ExtractorAgent | Extraction complete: 4 sources, 0 low-density chunks discarded
+2026-04-26 22:20:40 | INFO | SynthesizerAgent | Synthesizing report from 4 sources
+2026-04-26 22:21:00 | INFO | SynthesizerAgent | Synthesis complete: 13 claims extracted
+2026-04-26 22:21:00 | INFO | VerifierAgent | Verifying 13 claims against 5 validated URLs
+2026-04-26 22:21:00 | INFO | VerifierAgent | Verification: 13 verified, 0 rejected
+2026-04-26 22:21:00 | DEBUG | VerifierAgent | Applied confidence floor boost — strong evidence but low multiplier product
+2026-04-26 22:21:00 | INFO | VerifierAgent | Confidence: 0.402 | score=1.01 coverage=1.00 agreement=1.00 diversity=0.20 extraction_coverage=1.00
+2026-04-26 22:21:00 | INFO | Orchestrator | === KEEP v2 Pipeline END — Confidence: 0.402 ===
+2026-04-26 22:21:00 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 22:21:00 | INFO | Orchestrator | Query: 'asdfjklqweruiopzxcvbnm1234567890 testing string impossible to find'
+2026-04-26 22:21:00 | INFO | PlannerAgent | Planning sub-queries for: 'asdfjklqweruiopzxcvbnm1234567890 testing string impossible to find' (refinement loop 0)
+2026-04-26 22:21:11 | INFO | PlannerAgent | Generated 6 sub-queries
+2026-04-26 22:21:11 | DEBUG | PlannerAgent |   Sub-query 1: Generation and validation of high-entropy test strings for database performance benchmarking 2022-2024
+2026-04-26 22:21:11 | DEBUG | PlannerAgent |   Sub-query 2: Algorithmic challenges in retrieving non-indexed or malformed string data in large-scale systems
+2026-04-26 22:21:11 | DEBUG | PlannerAgent |   Sub-query 3: Statistical analysis of random character sequence distribution in cryptographic key generation
+2026-04-26 22:21:11 | DEBUG | PlannerAgent |   Sub-query 4: Strategies for identifying and handling 'lost' or unaddressable data objects in distributed storage architectures
+2026-04-26 22:21:11 | DEBUG | PlannerAgent |   Sub-query 5: Methodologies for simulating and testing search failures for unique string identifiers in NoSQL databases
+2026-04-26 22:21:11 | DEBUG | PlannerAgent |   Sub-query 6: Detection and recovery mechanisms for data corruption leading to unretrievable string values 2023-2025
+2026-04-26 22:21:11 | INFO | SearchAgent | Searching across 6 sub-queries (parallel, 3 adapters)
+2026-04-26 22:21:11 | INFO | DDGTool | DDG returned 0 results for: 'Generation and validation of high-entropy test str...'
+2026-04-26 22:21:11 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:21:15 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:21:15 | INFO | ArxivTool | arXiv returned 5 results for: 'Generation and validation of high-entropy test str...'
+2026-04-26 22:21:17 | INFO | TavilyTool | Tavily returned 5 results for: 'Generation and validation of high-entropy test str...'
+2026-04-26 22:21:19 | INFO | DDGTool | DDG returned 0 results for: 'Algorithmic challenges in retrieving non-indexed o...'
+2026-04-26 22:21:19 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:21:20 | INFO | TavilyTool | Tavily returned 5 results for: 'Algorithmic challenges in retrieving non-indexed o...'
+2026-04-26 22:21:20 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:21:21 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:21:22 | INFO | ArxivTool | arXiv returned 5 results for: 'Algorithmic challenges in retrieving non-indexed o...'
+2026-04-26 22:21:22 | INFO | DDGTool | DDG returned 0 results for: 'Statistical analysis of random character sequence ...'
+2026-04-26 22:21:22 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:21:25 | INFO | TavilyTool | Tavily returned 5 results for: 'Statistical analysis of random character sequence ...'
+2026-04-26 22:21:25 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:21:25 | INFO | ArxivTool | arXiv returned 5 results for: 'Statistical analysis of random character sequence ...'
+2026-04-26 22:21:25 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:21:26 | INFO | DDGTool | DDG returned 0 results for: 'Strategies for identifying and handling 'lost' or ...'
+2026-04-26 22:21:26 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:21:29 | INFO | TavilyTool | Tavily returned 5 results for: 'Strategies for identifying and handling 'lost' or ...'
+2026-04-26 22:21:29 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:21:29 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:21:31 | INFO | ArxivTool | arXiv returned 5 results for: 'Strategies for identifying and handling 'lost' or ...'
+2026-04-26 22:21:31 | INFO | DDGTool | DDG returned 0 results for: 'Methodologies for simulating and testing search fa...'
+2026-04-26 22:21:31 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:21:34 | INFO | TavilyTool | Tavily returned 5 results for: 'Methodologies for simulating and testing search fa...'
+2026-04-26 22:21:34 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:21:35 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:21:36 | INFO | ArxivTool | arXiv returned 5 results for: 'Methodologies for simulating and testing search fa...'
+2026-04-26 22:21:36 | INFO | DDGTool | DDG returned 5 results for: 'Detection and recovery mechanisms for data corrupt...'
+2026-04-26 22:21:36 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:21:40 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:21:41 | INFO | ArxivTool | arXiv returned 5 results for: 'Detection and recovery mechanisms for data corrupt...'
+2026-04-26 22:21:41 | INFO | TavilyTool | Tavily returned 5 results for: 'Detection and recovery mechanisms for data corrupt...'
+2026-04-26 22:21:41 | INFO | SearchAgent | Total unique sources after URL dedup: 30
+2026-04-26 22:21:41 | INFO | ValidatorAgent | Validating 30 sources
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 4.08 < 7.0): https://hpi.de/oldsite/fileadmin/user_upload/fachgebiete/nau
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 5.64 < 7.0): https://www.vldb.org/pvldb/vol13/p2787-barsky.pdf
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 3.12 < 7.0): https://gatiaher.github.io/projects/survey-of-data-structure
+2026-04-26 22:22:42 | INFO | ValidatorAgent | REJECTED source: https://algocademy.com/blog/algorithms-for-efficient-file-se — reason: Low-credibility blog with no identifiable author or publication date, not a foundational work.
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 4.8 < 7.0): https://engineeringblog.yelp.com/2023/01/rebuilding-a-cassan
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 4.68 < 7.0): https://people.eecs.berkeley.edu/~henrycg/files/academic/pap
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 5.22 < 7.0): https://apps.dtic.mil/sti/trecms/pdf/AD1151238.pdf
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://csrc.nist.rip/groups/ST/toolkit/rng/documents/nissc-
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 3.66 < 7.0): https://engineering.purdue.edu/kak/compsec/NewLectures/Lectu
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 5.64 < 7.0): https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.S
+2026-04-26 22:22:42 | INFO | ValidatorAgent | REJECTED source: http://arxiv.org/abs/cs/0604018v2 — reason: Outdated (>5 years) and not a foundational/seminal work for current cryptographic practices.
+2026-04-26 22:22:42 | INFO | ValidatorAgent | REJECTED source: http://arxiv.org/abs/0903.3448v1 — reason: Outdated (>5 years) and not a foundational/seminal work for current QKD research.
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 3.18 < 7.0): https://distributedsystemauthority.com/distributed-data-stor
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 4.5 < 7.0): https://web.stanford.edu/~ouster/cgi-bin/papers/StutsmanPhd.
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 3.42 < 7.0): https://www.geeksforgeeks.org/cloud-computing/strategies-for
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 3.42 < 7.0): https://www.resilio.com/blog/distributed-data-storage
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 3.84 < 7.0): https://www.solved.scality.com/distributed-object-storage/
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 3.66 < 7.0): https://datubaze.wordpress.com/wp-content/uploads/2021/03/md
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 5.04 < 7.0): https://apps.dtic.mil/sti/trecms/pdf/AD1114232.pdf
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 4.26 < 7.0): https://portswigger.net/web-security/nosql-injection
+2026-04-26 22:22:42 | INFO | ValidatorAgent | FILTERED source (score 5.46 < 7.0): https://owasp.org/www-project-web-security-testing-guide/lat
+2026-04-26 22:22:42 | INFO | ValidatorAgent | REJECTED source: https://medium.com/@rachoork/from-relational-to-revolutionar — reason: Low-credibility personal blog with no identifiable author expertise or publication date, not a foundational work.
+2026-04-26 22:22:42 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/en/answer/3466394642 — reason: Low-credibility user-generated content, low technical depth.
+2026-04-26 22:22:42 | INFO | ValidatorAgent | REJECTED source: https://www.detecteur.net/forum/ — reason: Content is clearly off-topic (metal detecting forum).
+2026-04-26 22:22:42 | INFO | ValidatorAgent | REJECTED source: https://www.detecteur.net/ — reason: Content is clearly off-topic (metal detecting forum).
+2026-04-26 22:22:42 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/326441255 — reason: Low-credibility user-generated content, low technical depth.
+2026-04-26 22:22:42 | INFO | ValidatorAgent | REJECTED source: https://www.detecteur.net/forum/topic134134.html — reason: Content is clearly off-topic (metal detecting forum).
+2026-04-26 22:22:42 | INFO | ValidatorAgent | Validation complete: 3 kept, 27 rejected/filtered
+2026-04-26 22:22:42 | INFO | ExtractorAgent | Extracting from 3 validated sources
+2026-04-26 22:22:53 | INFO | ExtractorAgent | Extraction complete: 3 sources, 0 low-density chunks discarded
+2026-04-26 22:22:53 | INFO | SynthesizerAgent | Synthesizing report from 3 sources
+2026-04-26 22:23:18 | WARNING | SynthesizerAgent | Could not parse claims block: Invalid \escape: line 10 column 62 (char 1708)
+2026-04-26 22:23:18 | INFO | SynthesizerAgent | Synthesis complete: 0 claims extracted
+2026-04-26 22:23:18 | WARNING | VerifierAgent | No claims to verify — synthesis may have failed
+2026-04-26 22:23:18 | INFO | VerifierAgent | Confidence: 0.0 | score=0.92 coverage=0.00 agreement=1.00 diversity=0.33 extraction_coverage=1.00
+2026-04-26 22:23:18 | INFO | Orchestrator | === KEEP v2 Pipeline END — Confidence: 0.0 ===
+2026-04-26 22:23:18 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 22:23:18 | INFO | Orchestrator | Query: 'impact of retrieval augmented generation on hallucination reduction in LLMs 2023-2025'
+2026-04-26 22:23:18 | INFO | PlannerAgent | Planning sub-queries for: 'impact of retrieval augmented generation on hallucination reduction in LLMs 2023-2025' (refinement loop 0)
+2026-04-26 22:23:29 | INFO | PlannerAgent | Generated 6 sub-queries
+2026-04-26 22:23:29 | DEBUG | PlannerAgent |   Sub-query 1: Architectural strategies of retrieval-augmented generation for hallucination mitigation in LLMs 2023-2025
+2026-04-26 22:23:29 | DEBUG | PlannerAgent |   Sub-query 2: Benchmarking and evaluation methodologies for hallucination reduction in RAG-enhanced LLMs 2023-2025
+2026-04-26 22:23:29 | DEBUG | PlannerAgent |   Sub-query 3: Influence of retriever design and indexing strategies on LLM hallucination reduction in RAG 2023-2025
+2026-04-26 22:23:29 | DEBUG | PlannerAgent |   Sub-query 4: Impact of generation-side prompting and re-ranking in RAG on LLM hallucination reduction 2023-2025
+2026-04-26 22:23:29 | DEBUG | PlannerAgent |   Sub-query 5: Limitations and challenges of retrieval-augmented generation for complete hallucination elimination in LLMs 2023-2025
+2026-04-26 22:23:29 | DEBUG | PlannerAgent |   Sub-query 6: Application of retrieval-augmented generation for hallucination reduction in domain-specific LLMs 2023-2025
+2026-04-26 22:23:29 | INFO | SearchAgent | Searching across 6 sub-queries (parallel, 3 adapters)
+2026-04-26 22:23:29 | INFO | DDGTool | DDG returned 0 results for: 'Architectural strategies of retrieval-augmented ge...'
+2026-04-26 22:23:29 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:23:32 | INFO | TavilyTool | Tavily returned 5 results for: 'Architectural strategies of retrieval-augmented ge...'
+2026-04-26 22:23:32 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:23:33 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:23:35 | INFO | ArxivTool | arXiv returned 5 results for: 'Architectural strategies of retrieval-augmented ge...'
+2026-04-26 22:23:35 | INFO | DDGTool | DDG returned 5 results for: 'Benchmarking and evaluation methodologies for hall...'
+2026-04-26 22:23:35 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:23:38 | INFO | TavilyTool | Tavily returned 5 results for: 'Benchmarking and evaluation methodologies for hall...'
+2026-04-26 22:23:38 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:23:38 | INFO | ArxivTool | arXiv returned 5 results for: 'Benchmarking and evaluation methodologies for hall...'
+2026-04-26 22:23:38 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:23:39 | INFO | DDGTool | DDG returned 0 results for: 'Influence of retriever design and indexing strateg...'
+2026-04-26 22:23:39 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:23:42 | INFO | TavilyTool | Tavily returned 5 results for: 'Influence of retriever design and indexing strateg...'
+2026-04-26 22:23:42 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:23:42 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:23:43 | INFO | ArxivTool | arXiv returned 5 results for: 'Influence of retriever design and indexing strateg...'
+2026-04-26 22:23:43 | INFO | DDGTool | DDG returned 5 results for: 'Impact of generation-side prompting and re-ranking...'
+2026-04-26 22:23:43 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:23:46 | INFO | ArxivTool | arXiv returned 5 results for: 'Impact of generation-side prompting and re-ranking...'
+2026-04-26 22:23:46 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:23:46 | INFO | TavilyTool | Tavily returned 5 results for: 'Impact of generation-side prompting and re-ranking...'
+2026-04-26 22:23:46 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:23:47 | INFO | DDGTool | DDG returned 0 results for: 'Limitations and challenges of retrieval-augmented ...'
+2026-04-26 22:23:47 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:23:50 | INFO | TavilyTool | Tavily returned 5 results for: 'Limitations and challenges of retrieval-augmented ...'
+2026-04-26 22:23:50 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:23:50 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:23:50 | INFO | ArxivTool | arXiv returned 5 results for: 'Limitations and challenges of retrieval-augmented ...'
+2026-04-26 22:23:51 | INFO | DDGTool | DDG returned 0 results for: 'Application of retrieval-augmented generation for ...'
+2026-04-26 22:23:51 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:23:54 | INFO | TavilyTool | Tavily returned 5 results for: 'Application of retrieval-augmented generation for ...'
+2026-04-26 22:23:54 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:23:54 | INFO | ArxivTool | arXiv returned 5 results for: 'Application of retrieval-augmented generation for ...'
+2026-04-26 22:23:54 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:23:54 | INFO | SearchAgent | Total unique sources after URL dedup: 41
+2026-04-26 22:23:54 | INFO | ValidatorAgent | Validating 41 sources
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.82 < 7.0): https://aclanthology.org/2025.semeval-1.151.pdf
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.2 < 7.0): https://kili-technology.com/blog/understanding-llm-hallucina
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.74 < 7.0): https://www.getzep.com/ai-agents/reducing-llm-hallucinations
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.16 < 7.0): https://www.saspublishers.com/media/articles/SJET_135_328-33
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://arxiv.org/html/2510.24476v1
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.38 < 7.0): https://www.geeksforgeeks.org/business-studies/benchmarking-
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.08 < 7.0): https://asq.org/quality-resources/benchmarking
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.14 < 7.0): https://databox.com/what-are-benchmarks
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 3.36 < 7.0): https://learntransformation.com/benchmarking-and-best-practi
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 3.6 < 7.0): https://en.wikipedia.org/wiki/Benchmarking
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.82 < 7.0): https://aclanthology.org/2025.uncertainlp-main.10.pdf
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://arxiv.org/abs/2505.04847
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.56 < 7.0): https://www.emergentmind.com/topics/halueval
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.34 < 7.0): https://www.mdpi.com/2227-7390/13/5/856
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://www.frontiersin.org/journals/artificial-intelligence
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.2 < 7.0): https://www.digital-alpha.com/reducing-llm-hallucinations-us
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.38 < 7.0): https://www.makebot.ai/blog-en/clinical-llm-rag-hallucinatio
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.98 < 7.0): https://www.promptingguide.ai/research/rag
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.4 < 7.0): https://openreview.net/forum?id=ztzZDzgfrh
+2026-04-26 22:24:42 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/27047110 — reason: Content is off-topic (linguistic discussion, not LLM hallucinations or benchmarking).
+2026-04-26 22:24:42 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/656682274 — reason: Content is off-topic (linguistic/management discussion, not LLM hallucinations or benchmarking).
+2026-04-26 22:24:42 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/425102812 — reason: Content is off-topic (video game translation, not LLM hallucinations or benchmarking).
+2026-04-26 22:24:42 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/544848483 — reason: Content is off-topic (affiliate marketing, not LLM hallucinations or benchmarking).
+2026-04-26 22:24:42 | INFO | ValidatorAgent | REJECTED source: https://www.zhihu.com/question/12783202254 — reason: Content is off-topic (discussion about a journal, not LLM hallucinations or benchmarking).
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 4.38 < 7.0): https://www.cloudwalk.io/ai/rag-tool-calling-and-the-fight-a
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.4 < 7.0): https://arxiv.org/html/2403.10446v1
+2026-04-26 22:24:42 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://www.nature.com/articles/s41598-026-38913-w
+2026-04-26 22:24:42 | INFO | ValidatorAgent | Validation complete: 5 kept, 27 rejected/filtered
+2026-04-26 22:24:42 | INFO | ExtractorAgent | Extracting from 5 validated sources
+2026-04-26 22:24:56 | INFO | ExtractorAgent | All chunks discarded for http://arxiv.org/abs/2505.17125v1 — low information density
+2026-04-26 22:24:56 | INFO | ExtractorAgent | All chunks discarded for http://arxiv.org/abs/2506.09886v2 — low information density
+2026-04-26 22:24:56 | INFO | ExtractorAgent | All chunks discarded for http://arxiv.org/abs/2502.11228v2 — low information density
+2026-04-26 22:24:56 | INFO | ExtractorAgent | Extraction complete: 2 sources, 0 low-density chunks discarded
+2026-04-26 22:24:56 | INFO | SynthesizerAgent | Synthesizing report from 2 sources
+2026-04-26 22:25:09 | INFO | SynthesizerAgent | Synthesis complete: 5 claims extracted
+2026-04-26 22:25:10 | INFO | VerifierAgent | Verifying 5 claims against 5 validated URLs
+2026-04-26 22:25:10 | INFO | VerifierAgent | Verification: 5 verified, 0 rejected
+2026-04-26 22:25:10 | DEBUG | VerifierAgent | Applied confidence floor boost — strong evidence but low multiplier product
+2026-04-26 22:25:10 | INFO | VerifierAgent | Confidence: 0.423 | score=1.12 coverage=1.00 agreement=1.00 diversity=0.20 extraction_coverage=1.00
+2026-04-26 22:25:10 | INFO | Orchestrator | === KEEP v2 Pipeline END — Confidence: 0.423 ===
+2026-04-26 22:27:56 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 22:27:56 | INFO | Orchestrator | Query: 'Impact of rag on llms'
+2026-04-26 22:27:56 | INFO | PlannerAgent | Planning sub-queries for: 'Impact of rag on llms' (refinement loop 0)
+2026-04-26 22:28:06 | INFO | PlannerAgent | Generated 6 sub-queries
+2026-04-26 22:28:06 | DEBUG | PlannerAgent |   Sub-query 1: Quantitative evaluation of RAG's effect on factual accuracy and relevance in LLM responses
+2026-04-26 22:28:06 | DEBUG | PlannerAgent |   Sub-query 2: Mechanisms and effectiveness of RAG in mitigating LLM hallucination
+2026-04-26 22:28:06 | DEBUG | PlannerAgent |   Sub-query 3: Architectural patterns and integration strategies for Retrieval-Augmented Generation with Large Language Models
+2026-04-26 22:28:06 | DEBUG | PlannerAgent |   Sub-query 4: RAG's role in incorporating real-time and domain-specific knowledge into LLMs 2022-2025
+2026-04-26 22:28:06 | DEBUG | PlannerAgent |   Sub-query 5: Evaluation methodologies and metrics for RAG-enhanced LLM systems
+2026-04-26 22:28:06 | DEBUG | PlannerAgent |   Sub-query 6: Challenges and limitations of Retrieval-Augmented Generation in production LLM deployments
+2026-04-26 22:28:06 | INFO | SearchAgent | Searching across 6 sub-queries (parallel, 3 adapters)
+2026-04-26 22:28:06 | INFO | DDGTool | DDG returned 0 results for: 'Quantitative evaluation of RAG's effect on factual...'
+2026-04-26 22:28:06 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:28:09 | INFO | TavilyTool | Tavily returned 5 results for: 'Quantitative evaluation of RAG's effect on factual...'
+2026-04-26 22:28:09 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:28:10 | INFO | ArxivTool | arXiv returned 5 results for: 'Quantitative evaluation of RAG's effect on factual...'
+2026-04-26 22:28:10 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:28:10 | INFO | DDGTool | DDG returned 0 results for: 'Mechanisms and effectiveness of RAG in mitigating ...'
+2026-04-26 22:28:10 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:28:12 | INFO | TavilyTool | Tavily returned 5 results for: 'Mechanisms and effectiveness of RAG in mitigating ...'
+2026-04-26 22:28:12 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:28:13 | INFO | ArxivTool | arXiv returned 5 results for: 'Mechanisms and effectiveness of RAG in mitigating ...'
+2026-04-26 22:28:13 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:28:13 | INFO | DDGTool | DDG returned 0 results for: 'Architectural patterns and integration strategies ...'
+2026-04-26 22:28:13 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:28:17 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:28:17 | INFO | ArxivTool | arXiv returned 5 results for: 'Architectural patterns and integration strategies ...'
+2026-04-26 22:28:17 | INFO | TavilyTool | Tavily returned 5 results for: 'Architectural patterns and integration strategies ...'
+2026-04-26 22:28:18 | INFO | DDGTool | DDG returned 5 results for: 'RAG's role in incorporating real-time and domain-s...'
+2026-04-26 22:28:18 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:28:21 | INFO | TavilyTool | Tavily returned 5 results for: 'RAG's role in incorporating real-time and domain-s...'
+2026-04-26 22:28:21 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:28:21 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:28:22 | INFO | ArxivTool | arXiv returned 5 results for: 'RAG's role in incorporating real-time and domain-s...'
+2026-04-26 22:28:22 | INFO | DDGTool | DDG returned 0 results for: 'Evaluation methodologies and metrics for RAG-enhan...'
+2026-04-26 22:28:22 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:28:25 | INFO | TavilyTool | Tavily returned 5 results for: 'Evaluation methodologies and metrics for RAG-enhan...'
+2026-04-26 22:28:25 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:28:26 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:28:26 | INFO | ArxivTool | arXiv returned 5 results for: 'Evaluation methodologies and metrics for RAG-enhan...'
+2026-04-26 22:28:27 | INFO | DDGTool | DDG returned 0 results for: 'Challenges and limitations of Retrieval-Augmented ...'
+2026-04-26 22:28:27 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:28:29 | INFO | TavilyTool | Tavily returned 5 results for: 'Challenges and limitations of Retrieval-Augmented ...'
+2026-04-26 22:28:29 | INFO | SearchAgent | Tavily returned 5 results
+2026-04-26 22:28:30 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:28:30 | INFO | ArxivTool | arXiv returned 5 results for: 'Challenges and limitations of Retrieval-Augmented ...'
+2026-04-26 22:28:30 | INFO | SearchAgent | Total unique sources after URL dedup: 40
+2026-04-26 22:28:30 | INFO | ValidatorAgent | Validating 40 sources
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://pmc.ncbi.nlm.nih.gov/articles/PMC12079058/
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://pmc.ncbi.nlm.nih.gov/articles/PMC12917324/
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.faktion.com/post/rag-output-validation---part-1-
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.54 < 7.0): https://itrexgroup.com/blog/how-does-rag-improve-the-accurac
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 5.34 < 7.0): https://www.scholarlyreview.org/article/158711-the-role-of-r
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 5.34 < 7.0): https://arxiv.org/html/2510.24476v1
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.56 < 7.0): https://machinelearningmastery.com/understanding-rag-part-vi
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://cleanlab.ai/blog/rag-tlm-hallucination-benchmarking/
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 5.34 < 7.0): https://www.mdpi.com/2227-7390/13/5/856
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.66 < 7.0): https://mbrenndoerfer.com/writing/hallucination-mitigation
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.84 < 7.0): https://www.zhihu.com/tardis/zm/art/675509396
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.48 < 7.0): https://www.zhihu.com/question/661457038
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.66 < 7.0): https://www.zhihu.com/question/629933428
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.02 < 7.0): https://www.zhihu.com/tardis/bd/art/10769642350
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.66 < 7.0): https://www.zhihu.com/question/1914466302451495286
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 5.58 < 7.0): https://aclanthology.org/2025.findings-naacl.311.pdf
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.9 < 7.0): https://dataforest.ai/blog/rag-in-2025-smarter-retrieval-and
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 5.34 < 7.0): https://www.mdpi.com/2076-3417/16/1/368
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.5 < 7.0): https://www.emergentmind.com/topics/domain-specific-retrieva
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 5.34 < 7.0): https://eil.mie.utoronto.ca/wp-content/uploads/2025/09/ONTOL
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.comet.com/site/blog/rag-evaluation/
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.48 < 7.0): https://medium.com/@ayushigupta9723/rags-evaluation-metrics-
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.patronus.ai/llm-testing/rag-evaluation-metrics
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.74 < 7.0): https://www.evidentlyai.com/llm-guide/rag-evaluation
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 5.34 < 7.0): https://arxiv.org/html/2504.14891v1
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.kore.ai/blog/challenges-in-adopting-retrieval-au
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.48 < 7.0): https://medium.com/@bijit211987/5-practical-challenges-of-ra
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.56 < 7.0): https://labelstud.io/blog/rag-fundamentals-challenges-and-ad
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 4.32 < 7.0): https://www.aiacceleratorinstitute.com/why-rag-fails-in-prod
+2026-04-26 22:29:40 | INFO | ValidatorAgent | FILTERED source (score 3.72 < 7.0): https://cloudian.com/guides/ai-infrastructure/how-rag-works-
+2026-04-26 22:29:40 | INFO | ValidatorAgent | Validation complete: 5 kept, 30 rejected/filtered
+2026-04-26 22:29:40 | INFO | ExtractorAgent | Extracting from 5 validated sources
+2026-04-26 22:29:53 | INFO | ExtractorAgent | Extraction complete: 5 sources, 0 low-density chunks discarded
+2026-04-26 22:29:53 | INFO | SynthesizerAgent | Synthesizing report from 5 sources
+2026-04-26 22:30:18 | INFO | SynthesizerAgent | Synthesis complete: 17 claims extracted
+2026-04-26 22:30:18 | INFO | VerifierAgent | Verifying 17 claims against 5 validated URLs
+2026-04-26 22:30:18 | INFO | VerifierAgent | Verification: 17 verified, 0 rejected
+2026-04-26 22:30:18 | DEBUG | VerifierAgent | Applied confidence floor boost — strong evidence but low multiplier product
+2026-04-26 22:30:18 | INFO | VerifierAgent | Confidence: 0.414 | score=1.07 coverage=1.00 agreement=1.00 diversity=0.20 extraction_coverage=1.00
+2026-04-26 22:30:18 | INFO | Orchestrator | === KEEP v2 Pipeline END — Confidence: 0.414 ===
+2026-04-26 22:32:11 | INFO | Orchestrator | === KEEP v2 Pipeline START (v5.0) ===
+2026-04-26 22:32:11 | INFO | Orchestrator | Query: 'Recent advancements in quantum error correction and their impact on scalability (2024'
+2026-04-26 22:32:11 | INFO | PlannerAgent | Planning sub-queries for: 'Recent advancements in quantum error correction and their impact on scalability (2024' (refinement loop 0)
+2026-04-26 22:32:30 | INFO | PlannerAgent | Generated 6 sub-queries
+2026-04-26 22:32:30 | DEBUG | PlannerAgent |   Sub-query 1: Recent developments in quantum LDPC codes and their fault-tolerance thresholds 2023-2024
+2026-04-26 22:32:30 | DEBUG | PlannerAgent |   Sub-query 2: Experimental demonstrations of fault-tolerant logical qubits on quantum hardware 2023-2024
+2026-04-26 22:32:30 | DEBUG | PlannerAgent |   Sub-query 3: Analysis of qubit and gate overhead for scalable fault-tolerant quantum computing with current QEC 2023-2024
+2026-04-26 22:32:30 | DEBUG | PlannerAgent |   Sub-query 4: Advancements in quantum error correction for superconducting qubit scalability 2023-2024
+2026-04-26 22:32:30 | DEBUG | PlannerAgent |   Sub-query 5: Modular and distributed architectures for scalable quantum computing leveraging QEC 2023-2024
+2026-04-26 22:32:30 | DEBUG | PlannerAgent |   Sub-query 6: Integration of error mitigation techniques to reduce QEC resource requirements 2023-2024
+2026-04-26 22:32:30 | INFO | SearchAgent | Searching across 6 sub-queries (parallel, 3 adapters)
+2026-04-26 22:32:30 | INFO | DDGTool | DDG returned 0 results for: 'Recent developments in quantum LDPC codes and thei...'
+2026-04-26 22:32:30 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:32:34 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:32:35 | INFO | TavilyTool | Tavily returned 5 results for: 'Recent developments in quantum LDPC codes and thei...'
+2026-04-26 22:33:02 | INFO | ArxivTool | arXiv returned 5 results for: 'Recent developments in quantum LDPC codes and thei...'
+2026-04-26 22:33:03 | INFO | DDGTool | DDG returned 5 results for: 'Experimental demonstrations of fault-tolerant logi...'
+2026-04-26 22:33:03 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:33:06 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:33:06 | INFO | TavilyTool | Tavily returned 5 results for: 'Experimental demonstrations of fault-tolerant logi...'
+2026-04-26 22:36:41 | INFO | ArxivTool | arXiv returned 5 results for: 'Experimental demonstrations of fault-tolerant logi...'
+2026-04-26 22:36:41 | INFO | DDGTool | DDG returned 0 results for: 'Analysis of qubit and gate overhead for scalable f...'
+2026-04-26 22:36:41 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:36:45 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:36:46 | INFO | TavilyTool | Tavily returned 5 results for: 'Analysis of qubit and gate overhead for scalable f...'
+2026-04-26 22:37:05 | INFO | ArxivTool | arXiv returned 5 results for: 'Analysis of qubit and gate overhead for scalable f...'
+2026-04-26 22:37:06 | INFO | DDGTool | DDG returned 5 results for: 'Advancements in quantum error correction for super...'
+2026-04-26 22:37:06 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:37:09 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:37:10 | INFO | ArxivTool | arXiv returned 5 results for: 'Advancements in quantum error correction for super...'
+2026-04-26 22:37:10 | INFO | TavilyTool | Tavily returned 5 results for: 'Advancements in quantum error correction for super...'
+2026-04-26 22:37:11 | INFO | DDGTool | DDG returned 0 results for: 'Modular and distributed architectures for scalable...'
+2026-04-26 22:37:11 | INFO | SearchAgent | DDG returned 0 results
+2026-04-26 22:37:14 | INFO | ArxivTool | arXiv returned 5 results for: 'Modular and distributed architectures for scalable...'
+2026-04-26 22:37:14 | INFO | SearchAgent | arXiv returned 5 results
+2026-04-26 22:37:14 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:37:14 | INFO | TavilyTool | Tavily returned 5 results for: 'Modular and distributed architectures for scalable...'
+2026-04-26 22:37:15 | INFO | DDGTool | DDG returned 5 results for: 'Integration of error mitigation techniques to redu...'
+2026-04-26 22:37:15 | INFO | SearchAgent | DDG returned 5 results
+2026-04-26 22:37:18 | WARNING | SearchAgent | GLOBAL Search Timeout Reached — partial results returned
+2026-04-26 22:37:19 | INFO | ArxivTool | arXiv returned 5 results for: 'Integration of error mitigation techniques to redu...'
+2026-04-26 22:37:20 | INFO | TavilyTool | Tavily returned 5 results for: 'Integration of error mitigation techniques to redu...'
+2026-04-26 22:37:20 | INFO | SearchAgent | Total unique sources after URL dedup: 20
+2026-04-26 22:37:20 | INFO | ValidatorAgent | Validating 20 sources

@@ -1,0 +1,26 @@
+# KEEP v2 Global Configuration
+
+pipeline_version: "v5.0"
+
+# Budgets & Circuit Breakers
+max_llm_calls: 10
+latency_budget_sec:
+  search: 4
+  extraction: 4
+  synthesis: 4
+max_refinement_attempts: 2
+
+# Thresholds
+dedup_threshold: 0.88
+validator_min_score: 7.0
+
+# Extraction Limits
+extractor:
+  max_chunks_per_source: 3
+  max_tokens_per_chunk: 500
+
+# Scoring Weights
+source_weights:
+  paper: 1.2
+  docs: 1.0
+  blog: 0.6

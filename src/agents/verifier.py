@@ -8,11 +8,12 @@ Computes normalized confidence score with diversity and coverage factors.
 import json
 from typing import Dict, Any, List, Set
 
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
+from src.utils.llm_router import get_llm
+
 from src.utils.logger import get_logger
-from src.utils.config import LLM_MODEL, LLM_TEMPERATURE, MAX_LLM_CALLS, PIPELINE_VERSION
+from src.utils.config import MAX_LLM_CALLS, PIPELINE_VERSION
 
 log = get_logger("VerifierAgent")
 

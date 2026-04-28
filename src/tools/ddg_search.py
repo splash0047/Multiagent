@@ -30,16 +30,11 @@ def _raw_search(query: str, max_results: int = 5) -> list:
         return []
 
 
-def ddg_search(query: str, cache=None) -> List[Dict]:
+def ddg_search(query: str) -> List[Dict]:
     """
     Search DuckDuckGo as a fallback.
     Returns list of dicts: {title, url, source_type, snippet}
     """
-    key = _cache_key(query)
-    if cache and key in cache:
-        log.info(f"Cache HIT for query: '{query[:50]}...'")
-        return cache[key]
-
     try:
         results = _raw_search(query)
 
@@ -53,9 +48,6 @@ def ddg_search(query: str, cache=None) -> List[Dict]:
             })
 
         log.info(f"DDG returned {len(sources)} results for: '{query[:50]}...'")
-
-        if cache is not None:
-            cache[key] = sources
 
         return sources
 

@@ -9,12 +9,13 @@ Fallback: clean text -> summary -> discard.
 import json
 from typing import Dict, Any, List
 
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
+from src.utils.llm_router import get_llm
+
 from src.utils.logger import get_logger
+from src.utils.vector_db import store_chunks
 from src.utils.config import (
-    LLM_MODEL, LLM_TEMPERATURE,
     MAX_CHUNKS_PER_SOURCE, MAX_TOKENS_PER_CHUNK,
     MAX_LLM_CALLS, PIPELINE_VERSION,
 )
@@ -79,7 +80,7 @@ def extractor_agent(state: Dict[str, Any]) -> Dict[str, Any]:
 
     log.info(f"Extracting from {len(validated)} validated sources")
 
-    llm = ChatGoogleGenerativeAI(model=LLM_MODEL, temperature=LLM_TEMPERATURE)
+    llm = get_llm("extractor")
 
     # Build source content for the LLM
     sources_text = json.dumps(
@@ -163,6 +164,9 @@ def extractor_agent(state: Dict[str, Any]) -> Dict[str, Any]:
         "chunks_discarded": discarded_chunks,
         "pipeline_version": PIPELINE_VERSION,
     })
+
+    if extracted_data:
+        store_chunks(extracted_data)
 
     return {
         **state,

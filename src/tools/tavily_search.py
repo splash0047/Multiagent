@@ -27,17 +27,11 @@ def _raw_search(client: TavilyClient, query: str, max_results: int = 5) -> list:
     return client.search(query=query, max_results=max_results, search_depth="advanced")
 
 
-def tavily_search(query: str, cache=None) -> List[Dict]:
+def tavily_search(query: str) -> List[Dict]:
     """
     Search using Tavily API.
     Returns list of dicts: {title, url, source_type, snippet}
     """
-    # Check cache first
-    key = _cache_key(query)
-    if cache and key in cache:
-        log.info(f"Cache HIT for query: '{query[:50]}...'")
-        return cache[key]
-
     api_key = os.getenv("TAVILY_API_KEY")
     if not api_key:
         log.error("TAVILY_API_KEY not set — skipping Tavily search")
@@ -58,10 +52,6 @@ def tavily_search(query: str, cache=None) -> List[Dict]:
             })
 
         log.info(f"Tavily returned {len(sources)} results for: '{query[:50]}...'")
-
-        # Cache results
-        if cache is not None:
-            cache[key] = sources
 
         return sources
 

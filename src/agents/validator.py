@@ -9,12 +9,13 @@ Keeps only sources with final_score >= VALIDATOR_MIN_SCORE.
 import json
 from typing import Dict, Any, List
 
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
+
+from src.utils.llm_router import get_llm
 
 from src.utils.logger import get_logger
 from src.utils.config import (
-    LLM_MODEL, LLM_TEMPERATURE, VALIDATOR_MIN_SCORE,
+    VALIDATOR_MIN_SCORE,
     SOURCE_WEIGHTS, MAX_LLM_CALLS, PIPELINE_VERSION,
 )
 
@@ -70,7 +71,7 @@ def validator_agent(state: Dict[str, Any]) -> Dict[str, Any]:
             })
         return {**state, "validated_sources": validated, "llm_call_count": llm_call_count}
 
-    llm = ChatGoogleGenerativeAI(model=LLM_MODEL, temperature=LLM_TEMPERATURE)
+    llm = get_llm("validator")
 
     # Format sources for the LLM
     sources_text = json.dumps(

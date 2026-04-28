@@ -8,11 +8,13 @@ Enforces claim-citation binding and handles contradictions honestly.
 import json
 from typing import Dict, Any
 
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
+from src.utils.llm_router import get_llm
+from src.tools.chart_generator import generate_chart_base64
+
 from src.utils.logger import get_logger
-from src.utils.config import LLM_MODEL, LLM_TEMPERATURE, MAX_LLM_CALLS, PIPELINE_VERSION
+from src.utils.config import MAX_LLM_CALLS, PIPELINE_VERSION
 
 log = get_logger("SynthesizerAgent")
 
@@ -32,6 +34,17 @@ Additionally, output a separate JSON block at the end with all claims mapped to 
   {"claim": "...", "citation_url": "..."},
   ...
 ]
+```
+
+If you find quantitative, tabular, or comparative data, generate a Python matplotlib code block to visualize it.
+Use `plt.savefig(OUTPUT_PATH)` to save the figure.
+Example:
+```python chart
+import matplotlib.pyplot as plt
+# setup data
+plt.bar(['A', 'B'], [10, 20])
+plt.title("Comparison")
+plt.savefig(OUTPUT_PATH, bbox_inches='tight')
 ```
 
 Be thorough, precise, and honest. Never fabricate information.
@@ -89,7 +102,7 @@ def synthesizer_agent(state: Dict[str, Any]) -> Dict[str, Any]:
             f"| score={vs.get('final_score','N/A')}\n"
         )
 
-    llm = ChatGoogleGenerativeAI(model=LLM_MODEL, temperature=LLM_TEMPERATURE)
+    llm = get_llm("synthesizer")
 
     response = llm.invoke([
         SystemMessage(content=SYNTHESIZER_SYSTEM_PROMPT),
@@ -116,6 +129,28 @@ def synthesizer_agent(state: Dict[str, Any]) -> Dict[str, Any]:
     # Remove the claims block from the visible report
     if "```claims" in report_content:
         report_content = report_content.split("```claims")[0].strip()
+
+    # Parse and execute chart block if present
+    chart_base64 = None
+    if "```python chart" in report_content:
+        try:
+            chart_code = report_content.split("```python chart")[1].split("```")[0].strip()
+            log.info("Chart code detected, generating chart...")
+            chart_base64 = generate_chart_base64(chart_code)
+        except Exception as e:
+            log.warning(f"Error parsing chart code: {e}")
+            
+    # Remove the chart code block from the visible report
+    if "```python chart" in report_content:
+        # We replace the whole block (including the closing ```) with the image or empty string
+        parts = report_content.split("```python chart")
+        before_chart = parts[0]
+        after_chart = parts[1].split("```", 1)[1] if "```" in parts[1] else ""
+        report_content = before_chart + "\n" + after_chart
+        
+    # Inject the chart image into the report if successfully generated
+    if chart_base64:
+        report_content += f"\n\n### Data Visualization\n\n![Generated Chart](data:image/png;base64,{chart_base64})\n"
 
     log.info(f"Synthesis complete: {len(claims)} claims extracted")
 

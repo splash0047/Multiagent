@@ -21,6 +21,7 @@ from src.agents.synthesizer import synthesizer_agent
 from src.agents.verifier import citation_verifier, confidence_engine
 from src.utils.logger import get_logger
 from src.utils.config import MAX_REFINEMENT_ATTEMPTS, PIPELINE_VERSION
+from src.utils.llm_router import reset_tracker, get_tracker
 
 # Load .env at module level
 load_dotenv()
@@ -131,13 +132,21 @@ def build_pipeline() -> StateGraph:
     return workflow
 
 
-def run_pipeline(query: str) -> Dict[str, Any]:
+def run_pipeline(query: str, uploaded_docs: list = None) -> Dict[str, Any]:
     """
     Execute the full KEEP v2 pipeline for a given research query.
+    
+    Args:
+        query: The research question to investigate.
+        uploaded_docs: Optional list of dicts with ingested document metadata
+                       (each with keys: filename, doc_url, num_chunks).
+    
     Returns the final state dict containing the report, confidence, claims, and logs.
     """
     log.info(f"=== KEEP v2 Pipeline START ({PIPELINE_VERSION}) ===")
     log.info(f"Query: '{query}'")
+    if uploaded_docs:
+        log.info(f"Uploaded documents: {len(uploaded_docs)} files")
 
     workflow = build_pipeline()
     app = workflow.compile()
@@ -145,21 +154,37 @@ def run_pipeline(query: str) -> Dict[str, Any]:
     initial_state = {
         "query": query,
         "sub_queries": [],
+        "search_mode": "web_only",
         "sources": [],
         "validated_sources": [],
         "extracted_data": [],
+        "uploaded_docs": uploaded_docs or [],
         "claims": [],
         "final_report": "",
         "confidence": 0.0,
         "llm_call_count": 0,
         "refinement_loops": 0,
         "explainability_log": [],
+        "model_usage_log": {},
         "low_evidence_flag": False,
         "no_result_flag": False,
     }
 
+    # Reset the LLM usage tracker for this run
+    reset_tracker()
+
     final_state = app.invoke(initial_state)
 
+    # Capture routing analytics
+    usage_summary = get_tracker().summary()
+    final_state["model_usage_log"] = usage_summary
+
     log.info(f"=== KEEP v2 Pipeline END — Confidence: {final_state.get('confidence', 0.0)} ===")
+    log.info(
+        f"LLM Routing: {usage_summary.get('cloud_calls', 0)} cloud, "
+        f"{usage_summary.get('local_calls', 0)} local, "
+        f"{usage_summary.get('fallback_triggers', 0)} fallbacks, "
+        f"savings: {usage_summary.get('cost_savings_pct', 0)}%"
+    )
 
     return final_state

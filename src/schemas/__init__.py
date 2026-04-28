@@ -4,6 +4,7 @@ from .state import (
     ExtractedChunk,
     ExtractedData,
     Claim,
+    UploadedDoc,
     ResearchState,
 )
 
@@ -13,5 +14,6 @@ __all__ = [
     "ExtractedChunk",
     "ExtractedData",
     "Claim",
+    "UploadedDoc",
     "ResearchState",
 ]

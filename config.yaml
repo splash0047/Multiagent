@@ -24,3 +24,38 @@ source_weights:
   paper: 1.2
   docs: 1.0
   blog: 0.6
+
+# ── Hybrid LLM Cost-Routing (Phase 4) ─────────────────────
+llm_routing:
+  # Reasoning Tier — high-quality cloud models for complex tasks
+  reasoning:
+    provider: "google"
+    model: "gemini-2.5-flash"
+    temperature: 0.0
+
+  # Classification Tier — local Ollama for repetitive tasks
+  classification:
+    provider: "ollama"
+    model: "llama3.1:8b"
+    base_url: "http://localhost:11434"
+    temperature: 0.0
+
+  # Fallback: if local model fails, retry with cloud
+  fallback:
+    enabled: true
+    max_retries: 1
+    provider: "google"
+    model: "gemini-2.5-flash"
+
+  # Agent-to-tier mapping
+  agent_tiers:
+    planner: "reasoning"
+    synthesizer: "reasoning"
+    verifier: "reasoning"
+    extractor: "classification"
+    validator: "classification"
+
+  # Cost estimates (per 1M tokens, USD) for tracking
+  cost_per_million_tokens:
+    gemini-2.5-flash: 0.15
+    llama3.1:8b: 0.0  # Free — local inference

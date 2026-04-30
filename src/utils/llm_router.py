@@ -125,8 +125,14 @@ def _build_ollama_llm(model: str, base_url: str, temperature: float):
 
 
 def _build_cloud_llm(model: str, temperature: float):
-    """Build a Google Gemini LLM instance."""
-    return ChatGoogleGenerativeAI(model=model, temperature=temperature)
+    """Build a Cloud LLM instance (OpenAI or Google). Returns (llm, actual_model, provider)."""
+    import os
+    if os.environ.get("OPENAI_API_KEY"):
+        from langchain_openai import ChatOpenAI
+        openai_model = "gpt-4o"
+        return ChatOpenAI(model=openai_model, temperature=temperature), openai_model, "openai"
+    
+    return ChatGoogleGenerativeAI(model=model, temperature=temperature), model, "google"
 
 
 def get_llm(agent_name: str):
@@ -159,9 +165,9 @@ def get_llm(agent_name: str):
     cfg = REASONING_TIER
     model = cfg.get("model", "gemini-2.5-flash")
     temp = cfg.get("temperature", 0.0)
-    llm = _build_cloud_llm(model, temp)
-    log.info(f"[{agent_name}] → CLOUD Gemini ({model})")
-    return _RoutedLLM(llm, agent_name, tier, model, "google")
+    llm, actual_model, provider = _build_cloud_llm(model, temp)
+    log.info(f"[{agent_name}] → CLOUD {provider} ({actual_model})")
+    return _RoutedLLM(llm, agent_name, tier, actual_model, provider)
 
 
 # ── Routed LLM Wrapper ────────────────────────────────────
@@ -181,66 +187,84 @@ class _RoutedLLM:
         self._provider = provider
 
     def invoke(self, messages: List[BaseMessage], **kwargs):
-        """Invoke with tracking and fallback."""
-        start = time.perf_counter()
-        try:
-            result = self._llm.invoke(messages, **kwargs)
-            latency = (time.perf_counter() - start) * 1000
+        """Invoke with tracking, automatic retries for rate limits, and fallback."""
+        max_retries = 3
+        
+        for attempt in range(max_retries):
+            start = time.perf_counter()
+            try:
+                result = self._llm.invoke(messages, **kwargs)
+                latency = (time.perf_counter() - start) * 1000
 
-            _tracker.log_call(LLMCallRecord(
-                agent=self._agent_name,
-                tier=self._tier,
-                model=self._model,
-                provider=self._provider,
-                latency_ms=round(latency, 1),
-            ))
-            return result
+                _tracker.log_call(LLMCallRecord(
+                    agent=self._agent_name,
+                    tier=self._tier,
+                    model=self._model,
+                    provider=self._provider,
+                    latency_ms=round(latency, 1),
+                ))
+                return result
 
-        except Exception as e:
-            latency = (time.perf_counter() - start) * 1000
-            log.error(
-                f"[{self._agent_name}] {self._provider}/{self._model} FAILED "
-                f"({latency:.0f}ms): {e}"
-            )
-
-            # Attempt cloud fallback if this was a local call
-            if self._provider == "ollama" and FALLBACK_CFG.get("enabled", True):
-                log.info(f"[{self._agent_name}] Retrying with cloud fallback...")
-                fallback_model = FALLBACK_CFG.get("model", "gemini-2.5-flash")
-                fallback_llm = _build_cloud_llm(
-                    fallback_model,
-                    REASONING_TIER.get("temperature", 0.0),
+            except Exception as e:
+                latency = (time.perf_counter() - start) * 1000
+                err_str = str(e).lower()
+                
+                # Check for rate limit or server overloaded (503, 429)
+                is_transient = "503" in err_str or "429" in err_str or "temporarily" in err_str or "resource exhausted" in err_str
+                
+                if is_transient and attempt < max_retries - 1:
+                    sleep_time = 2 ** attempt
+                    log.warning(
+                        f"[{self._agent_name}] {self._provider}/{self._model} overloaded. "
+                        f"Retrying in {sleep_time}s... (Attempt {attempt+1}/{max_retries})"
+                    )
+                    import time as tm
+                    tm.sleep(sleep_time)
+                    continue
+                    
+                log.error(
+                    f"[{self._agent_name}] {self._provider}/{self._model} FAILED "
+                    f"({latency:.0f}ms): {e}"
                 )
 
-                start_fb = time.perf_counter()
-                try:
-                    result = fallback_llm.invoke(messages, **kwargs)
-                    fb_latency = (time.perf_counter() - start_fb) * 1000
-
-                    _tracker.log_call(LLMCallRecord(
-                        agent=self._agent_name,
-                        tier=self._tier,
-                        model=fallback_model,
-                        provider="google",
-                        latency_ms=round(fb_latency, 1),
-                        fallback_used=True,
-                        error=str(e),
-                    ))
-                    log.info(
-                        f"[{self._agent_name}] Cloud fallback succeeded ({fb_latency:.0f}ms)"
+                # Attempt cloud fallback if this was a local call
+                if self._provider == "ollama" and FALLBACK_CFG.get("enabled", True):
+                    log.info(f"[{self._agent_name}] Retrying with cloud fallback...")
+                    fallback_model = FALLBACK_CFG.get("model", "gemini-2.5-flash")
+                    fallback_llm, actual_fb_model, fb_provider = _build_cloud_llm(
+                        fallback_model,
+                        REASONING_TIER.get("temperature", 0.0),
                     )
-                    return result
-                except Exception as fb_e:
-                    log.error(f"[{self._agent_name}] Cloud fallback ALSO failed: {fb_e}")
-                    raise fb_e
 
-            # No fallback possible — re-raise
-            _tracker.log_call(LLMCallRecord(
-                agent=self._agent_name,
-                tier=self._tier,
-                model=self._model,
-                provider=self._provider,
-                latency_ms=round(latency, 1),
-                error=str(e),
-            ))
-            raise
+                    start_fb = time.perf_counter()
+                    try:
+                        result = fallback_llm.invoke(messages, **kwargs)
+                        fb_latency = (time.perf_counter() - start_fb) * 1000
+
+                        _tracker.log_call(LLMCallRecord(
+                            agent=self._agent_name,
+                            tier=self._tier,
+                            model=actual_fb_model,
+                            provider=fb_provider,
+                            latency_ms=round(fb_latency, 1),
+                            fallback_used=True,
+                            error=str(e),
+                        ))
+                        log.info(
+                            f"[{self._agent_name}] Cloud fallback succeeded ({fb_latency:.0f}ms)"
+                        )
+                        return result
+                    except Exception as fb_e:
+                        log.error(f"[{self._agent_name}] Cloud fallback ALSO failed: {fb_e}")
+                        raise fb_e
+
+                # No fallback possible — re-raise
+                _tracker.log_call(LLMCallRecord(
+                    agent=self._agent_name,
+                    tier=self._tier,
+                    model=self._model,
+                    provider=self._provider,
+                    latency_ms=round(latency, 1),
+                    error=str(e),
+                ))
+                raise

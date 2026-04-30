@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 import json
 import asyncio
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -36,6 +37,7 @@ class UploadedDocRef(BaseModel):
 class QueryRequest(BaseModel):
     query: str
     uploaded_docs: Optional[List[UploadedDocRef]] = None
+    openai_api_key: Optional[str] = None
 
 workflow = build_pipeline()
 pipeline_app = workflow.compile()
@@ -139,6 +141,10 @@ async def research(req: QueryRequest):
             "no_result_flag": False,
         }
         
+        # Set API Key in environment if provided
+        if req.openai_api_key:
+            os.environ["OPENAI_API_KEY"] = req.openai_api_key
+        
         # We use astream to stream graph updates
         try:
             async for output in pipeline_app.astream(initial_state):
@@ -160,6 +166,9 @@ async def research(req: QueryRequest):
         except Exception as e:
             log.error(f"Pipeline error: {e}")
             yield f"data: {json.dumps({'error': str(e)})}\n\n"
+        finally:
+            if req.openai_api_key and "OPENAI_API_KEY" in os.environ:
+                del os.environ["OPENAI_API_KEY"]
 
     return StreamingResponse(event_generator(), media_type="text/event-stream")
 

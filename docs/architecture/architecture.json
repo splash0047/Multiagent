@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "KEEP research pipeline architecture",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/splash0047/Multiagent",
+      "provider": "github",
+      "revision": "02f6a12c04b879c722c783a6a938239579f584a1"
+    }
+  },
+  "components": [
+    {
+      "id": "ui",
+      "type": "frontend",
+      "label": "Next.js research UI",
+      "pos": [
+        65,
+        300
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "frontend/src/app/research/page.tsx"
+        }
+      ],
+      "sublabel": "query / event stream"
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "FastAPI",
+      "pos": [
+        340,
+        300
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/api.py"
+        }
+      ],
+      "sublabel": "upload + research SSE"
+    },
+    {
+      "id": "graph",
+      "type": "backend",
+      "label": "LangGraph pipeline",
+      "pos": [
+        650,
+        300
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/orchestrator/pipeline.py"
+        }
+      ],
+      "sublabel": "plan \u2192 verify \u2192 confidence"
+    },
+    {
+      "id": "search",
+      "type": "external",
+      "label": "Web search tools",
+      "pos": [
+        955,
+        100
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/agents/search.py"
+        }
+      ],
+      "sublabel": "Tavily / arXiv / DDG"
+    },
+    {
+      "id": "memory",
+      "type": "database",
+      "label": "Pinecone",
+      "pos": [
+        650,
+        510
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/utils/vector_db.py"
+        }
+      ],
+      "sublabel": "document chunks"
+    },
+    {
+      "id": "models",
+      "type": "external",
+      "label": "LLM router",
+      "pos": [
+        955,
+        510
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/utils/llm_router.py"
+        }
+      ],
+      "sublabel": "Gemini / Ollama fallback"
+    },
+    {
+      "id": "ingest",
+      "type": "backend",
+      "label": "Document ingestion",
+      "pos": [
+        340,
+        510
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "src/agents/ingestion.py"
+        }
+      ],
+      "sublabel": "PDF / DOCX / CSV"
+    }
+  ],
+  "connections": [
+    {
+      "from": "ui",
+      "to": "api",
+      "label": "HTTP + SSE"
+    },
+    {
+      "from": "api",
+      "to": "graph",
+      "label": "research run"
+    },
+    {
+      "from": "graph",
+      "to": "search",
+      "label": "retrieve sources"
+    },
+    {
+      "from": "graph",
+      "to": "memory",
+      "label": "document search",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "from": "graph",
+      "to": "models",
+      "label": "agent reasoning"
+    },
+    {
+      "from": "api",
+      "to": "ingest",
+      "label": "upload",
+      "labelDy": 24
+    },
+    {
+      "from": "ingest",
+      "to": "memory",
+      "label": "store chunks",
+      "fromSide": "right",
+      "toSide": "left"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Runtime path",
+      "items": [
+        "The graph runs planner, search, validation, extraction, synthesis, citation checks, and confidence"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Implementation note",
+      "items": [
+        "Document ingestion stores searchable chunks in Pinecone"
+      ]
+    }
+  ]
+}
